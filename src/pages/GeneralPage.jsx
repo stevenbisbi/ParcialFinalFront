@@ -21,17 +21,19 @@ export function GeneralPage() {
     fetchData();
   }, []);
 
+  console.log("Users:", users);
+
   return (
-    <div>
+    <div className="container">
       <div>
         <h1>Usuarios:</h1>
         {users.length === 0 ? (
-          <div>No hay usuarios disponibles.</div>
+          <div className="no-data">No hay usuarios disponibles.</div>
         ) : (
           <ul>
             {users.map((user) => (
               <li key={user.id}>
-                {user.firstName}, {user.lastName} - {user.role}
+                {user.name}, {user.role}
               </li>
             ))}
           </ul>
@@ -40,7 +42,7 @@ export function GeneralPage() {
       <div>
         <h1>Roles Disponibles:</h1>
         {roles.length === 0 ? (
-          <div>No hay usuarios disponibles.</div>
+          <div className="no-data">No hay usuarios disponibles.</div>
         ) : (
           <ul>
             {roles.map((role) => (

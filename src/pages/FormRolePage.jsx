@@ -23,7 +23,7 @@ export function FormRolePage() {
     });
   };
   return (
-    <>
+    <div className="container">
       <h1>Formulario de Rol</h1>
       <form>
         <div>
@@ -52,6 +52,6 @@ export function FormRolePage() {
           Crear Rol
         </button>
       </form>
-    </>
+    </div>
   );
 }
